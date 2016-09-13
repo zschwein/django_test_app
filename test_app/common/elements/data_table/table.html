@@ -1,0 +1,22 @@
+<table id="{{ table.name }}">
+        <thead>
+            <tr>
+                {% for item in table.columns %}
+                    <th class="{{ item.filter }}">{{ item.label }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+    {% if table.rows %}
+        <tbody>
+            {% for rec in table.rows %}
+                <tr>
+                {% for value in rec %}
+                    <td>{{ value }}</td>
+                {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    {% endif %}
+    </table>
+
+

@@ -1,0 +1,48 @@
+{% extends 'base/base_page.html' %}
+{% load staticfiles %}
+
+{% block head %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static "class_based_views/expenditure/expenditure_style.css" %}"/>
+<script type="text/javascript" src="{% static "library/datatables/jquery.dataTables.js" %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static "library/datatables/jquery.dataTables.min.css" %}"/>
+<script type="text/javascript" src="{% static "class_based_views/expenditure/expenditure_script.js" %}"></script>
+{% endblock %}
+
+{% block body %}
+<div id="nav_bar" class="nav_bar">
+a test
+</div>
+
+
+    <div style="width: 50%">
+    {% with form=expenditure_form.form id=expenditure_form.id %}
+    {% include 'elements/form_datatable/form_datatable.html' %}
+    {% endwith %}
+    <div style="float:left">
+        <input id="addRow" type="button" name="add_new_row" value="Add">
+    </div>
+    <div style="float:right">
+        <input id="exp_form_submit" type="button" name="submit" value="Submit">
+    </div>
+
+    </div>
+<div style="width: 50%; padding-top: 50px">
+    {% with table=test_table %}
+        {% include 'elements/data_table/table.html' %}
+    {% endwith %}
+</div>
+
+<div style="padding-top: 50px">
+<form>
+    {% csrf_token %}
+    {{ expense_type_form }}
+</form>
+</div>
+
+    {% include 'expenditure/expense_type_add/expense_type_add_page.html' %}
+
+{% endblock %}
+
+{% block page_includes %}
+{% endblock %}

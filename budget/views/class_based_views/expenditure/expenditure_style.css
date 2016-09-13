@@ -1,0 +1,28 @@
+
+.sample
+{
+min-width: 50%;
+color: burlywood;
+padding-top: 20px;
+    background-color: aquamarine;
+padding-color: black
+}
+
+/* div with class ui-datepicker, which is what jqueyr ui creates
+for date picker. make smaller */
+div.ui-datepicker {
+    font-size: 62.5%;
+}
+
+.nav_bar{
+    width: 100%;
+    background-color: slategrey;
+    height: 50% ;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 5px;
+
+}
+
+.warning{
+    background-color: yellow;
+}

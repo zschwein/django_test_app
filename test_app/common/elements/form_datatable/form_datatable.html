@@ -1,0 +1,16 @@
+<table id="{{ id }}">
+    <thead>
+        <tr>
+            {% for field in form %}
+                <th>{{field.label}}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            {% for field in form %}
+                <td>{{field}}</td>
+            {% endfor %}
+        </tr>
+    </tbody>
+</table>

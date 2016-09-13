@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+{% block head %}
+<head>
+    <meta charset="UTF-8">
+    <title>{{ app_titile }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static "library/jqueryUI/jquery-ui.min.css" %}"/>
+    <script type="text/javascript" src="{% static "library/jquery/jquery-2.1.1.js" %}"></script>
+    <script type="text/javascript" src="{% static "library/jqueryUI/jquery-ui.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "library/jscookie/js.cookie.js" %}"></script>
+</head>
+{% endblock %}
+
+<body>
+{% block body %}
+
+
+{%  endblock %}
+
+
+{% block page_includes %}
+
+{% endblock %}
+</body>
+
+
+</html>
+

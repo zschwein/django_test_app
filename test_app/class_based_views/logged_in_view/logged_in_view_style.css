@@ -1,0 +1,29 @@
+#nav_bar{
+
+    display: block;
+    /* no parent so nav bar div will use the document as parent and scroll with page */
+    position: relative;
+    height: 50px;
+    background-color: olivedrab;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: wheat;
+}
+
+.quicklink {
+
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.nav_float_right{
+
+    float: right;
+}
+
+.nav_float_left{
+
+    float: left;
+}

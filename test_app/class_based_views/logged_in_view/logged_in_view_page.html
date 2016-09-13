@@ -1,0 +1,28 @@
+{% extends 'base/base_page.html' %}
+{% load staticfiles %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static "logged_in_view/logged_in_view_style.css" %}"/>
+{% endblock %}
+
+
+{% block body %}
+    <div id="nav_bar">
+
+        <div id="logo_div" class="nav_float_left" style="height: 10%">
+            <img src="{% static 'images/manbearpig.jpg' %}" height="50px" width="50px">
+        </div>
+        <div id="budget_quicklink" class="quicklink">
+            <a href="{% url 'bugd:exp' %}">Budget App</a>
+        </div>
+
+
+        <div id="user_info_div" class="nav_float_right">
+            <b>{{ username }}</b>
+            <div style="clear:both"></div>
+            <b> {{ last_login }}</b>
+        </div>
+    </div>
+
+    <b>Welcome to the test APP!!</b>
+{% endblock %}
